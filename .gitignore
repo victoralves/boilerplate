@@ -19,3 +19,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Compiled files
+src/components/App/App.css
+src/components/App/App.css.map
