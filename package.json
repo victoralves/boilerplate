@@ -11,14 +11,20 @@
     "redux": "^3.7.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "develop-css": "stylus -w -m src/components/App/App.styl -o src/components/App/App.css",
+    "build-css": "stylus src/components/App/App.styl -o src/components/App/App.css",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p develop-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
     "eslint": "^4.15.0",
     "eslint-plugin-react": "^7.5.1",
+    "npm-run-all": "^4.1.2",
+    "stylus": "^0.54.5",
     "redux-logger": "^3.0.6"
   }
 }
