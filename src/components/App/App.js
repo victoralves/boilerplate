@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import logo from '../../assets/img/logo.svg';
-import './App.css';
-
+import React, { Component } from 'react'
+import logo from '../../assets/img/logo.svg'
+import './App.css'
 import logger from 'redux-logger'
 import { applyMiddleware, createStore } from 'redux'
 import { Provider } from 'react-redux'
-import { populateApp, populatePlaces, startPopulateApp } from '../../actions/actions.js'
-import appReducer from '../../reducers/appReducer.js'
+import { populateApp } from '../../actions/actions.js'
+import appReducer from '../../reducers/appReducer'
 
 const store = createStore(appReducer, applyMiddleware(logger))
+store.dispatch(populateApp())
 
 const App = () => {
     return (
@@ -20,10 +20,10 @@ const App = () => {
                 </header>
                 <p className="App-intro">
                     To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+                </p>
             </div>
         </Provider>
-    );
+    )
 }
 
 export default App;

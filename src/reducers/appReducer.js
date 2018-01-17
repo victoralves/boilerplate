@@ -3,7 +3,8 @@ const appReducer = (state = {}, action) => {
         case 'POPULATE_APP':
             return {
                 ...state,
-                teste: "teste",
             }
     }
 }
+
+export default appReducer
