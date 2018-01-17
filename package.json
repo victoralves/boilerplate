@@ -8,9 +8,17 @@
     "react-scripts": "1.0.17"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "develop-css": "stylus -w -m src/App.styl -o src/App.css",
+    "build-css": "stylus src/App.styl -o src/App.css",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p develop-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.2",
+    "stylus": "^0.54.5"
   }
 }
