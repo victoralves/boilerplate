@@ -11,8 +11,8 @@
     "redux": "^3.7.2"
   },
   "scripts": {
-    "develop-css": "stylus -w -m src/App.styl -o src/App.css",
-    "build-css": "stylus src/App.styl -o src/App.css",
+    "develop-css": "stylus -w -m src/components/App/App.styl -o src/components/App/App.css",
+    "build-css": "stylus src/components/App/App.styl -o src/components/App/App.css",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p develop-css start-js",
     "build-js": "react-scripts build",
