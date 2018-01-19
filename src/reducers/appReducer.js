@@ -4,6 +4,7 @@ const appReducer = (state = {}, action) => {
             return {
                 ...state,
             }
+        // no default
     }
 }
 

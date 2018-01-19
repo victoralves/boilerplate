@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import logo from '../../assets/img/logo.svg'
 import './App.css'
 import logger from 'redux-logger'
@@ -26,4 +26,4 @@ const App = () => {
     )
 }
 
-export default App;
+export default App
